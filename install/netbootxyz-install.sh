@@ -19,6 +19,7 @@ $STD apt-get install -y --no-install-recommends \
   busybox \
   curl \
   git \
+  gpg \
   jq \
   nginx \
   sudo \
