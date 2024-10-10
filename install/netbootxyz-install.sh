@@ -14,22 +14,19 @@ network_check
 update_os
 
 msg_info "Installing Dependencies"
-$STD apt-get install -y --no-install-recommends \ 
-   bash \
-   busybox \
-   curl \
-   envsubst \
-   git \
-   jq \
-   nghttp2-dev \
-   nginx \
-   nodejs \
-   shadow \
-   sudo \
-   supervisor \
-   syslog-ng \
-   tar \
-   dnsmasq
+$STD apt-get install -y --no-install-recommends \
+  bash \
+  busybox \
+  curl \
+  git \
+  jq \
+  nginx \
+  nodejs \
+  sudo \
+  supervisor \
+  syslog-ng \
+  tar \
+  dnsmasq
 
 #$STD apt-get install -y --no-cache --virtual=build-dependencies \
 #   npm
