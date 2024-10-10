@@ -62,9 +62,9 @@ $STD npm install --prefix /app
 cp -r /app/root/defaults/* /defaults
 cp -r /app/root/etc/* /etc
 
-TFTPD_OPTS=''
-NGINX_PORT='80'
-WEB_APP_PORT='3000'
+export TFTPD_OPTS=''
+export NGINX_PORT='80'
+export WEB_APP_PORT='3000'
 
 $STD /app/root/start.sh
 
