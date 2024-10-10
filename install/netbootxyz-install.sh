@@ -29,10 +29,10 @@ $STD apt-get install -y \
    supervisor \
    syslog-ng \
    tar \
-   dnsmasq}
+   dnsmasq
 
-$STD apt-get install -y --no-cache --virtual=build-dependencies \
-   npm
+#$STD apt-get install -y --no-cache --virtual=build-dependencies \
+#   npm
 
 msg_ok "Installed Dependencies"
 
