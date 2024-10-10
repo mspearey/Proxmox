@@ -59,8 +59,8 @@ wget -q https://github.com/netbootxyz/webapp/archive/${WEBAPP_VERSION}.tar.gz -O
 tar xf /opt/webapp.tar.gz -C /app/ --strip-components 1
 $STD npm install --prefix /app
 
-cp /app/root/defaults /defaults
-cp /app/root/etc /etc
+cp -r /app/root/defaults /defaults
+cp -r /app/root/etc /etc
 
 $STD /app/root/init.sh
 
