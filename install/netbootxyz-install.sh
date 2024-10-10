@@ -59,15 +59,12 @@ wget -q https://github.com/netbootxyz/webapp/archive/${WEBAPP_VERSION}.tar.gz -O
 tar xf /opt/webapp.tar.gz -C /app/ --strip-components 1
 $STD npm install --prefix /app
 
-cp -r /app/root/defaults /defaults
-cp -r /app/root/etc /etc
+cp -r /app/root/defaults/* /defaults
+cp -r /app/root/etc/* /etc
 
-$STD /app/root/init.sh
+$STD /app/root/start.sh
 
 msg_ok "Installed Netbootxyz $WEBAPP_VERSION"
-
-supervisord -c /etc/supervisor.conf
-msg_ok "Configured Services"
 
 motd_ssh
 customize
