@@ -33,11 +33,16 @@ $STD apt-get install -y --no-install-recommends \
 
 msg_ok "Installed Dependencies"
 
+msg_info "Installing Node.js"
+$STD apt-get update
+$STD apt-get install -y nodejs
+msg_ok "Installed Node.js"
+
 WEBAPP_VERSION=$(curl -sX GET "https://api.github.com/repos/netbootxyz/webapp/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]');
 msg_info "Installing Netbootxyz $WEBAPP_VERSION"
 
 groupmod -g 1000 users
-useradd -u 911 -U -d /config -s /bin/false nbxyz
+useradd -u 1011 -U -d /config -s /bin/false nbxyz
 usermod -G users nbxyz
 mkdir /app \
       /config \
