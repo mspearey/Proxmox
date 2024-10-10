@@ -58,7 +58,6 @@ wget -q https://github.com/netbootxyz/webapp/archive/${WEBAPP_VERSION}.tar.gz -O
         
 tar xf /opt/webapp.tar.gz -C /app/ --strip-components 1
 $STD npm install --prefix /app
-apk del --purge build-dependencies
 
 cp root/defaults /defaults
 cp root/etc /etc
