@@ -13,8 +13,8 @@ setting_up_container
 network_check
 update_os
 
-msg_info "Installing Dependencies (Patience)"
-$STD apt-get install -y \ 
+msg_info "Installing Dependencies"
+$STD apt-get install -y --no-install-recommends \ 
    bash \
    busybox \
    curl \
