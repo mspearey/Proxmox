@@ -36,7 +36,7 @@ function default_settings() {
   DISK_SIZE="$var_disk"
   CORE_COUNT="$var_cpu"
   RAM_SIZE="$var_ram"
-  BRG="vmbr0"
+  BRG="vmbr3"
   NET="dhcp"
   GATE=""
   APT_CACHER=""
@@ -47,8 +47,8 @@ function default_settings() {
   NS=""
   MAC=""
   VLAN=""
-  SSH="no"
-  VERB="no"
+  SSH="yes"
+  VERB="yes"
   echo_default
 }
 
